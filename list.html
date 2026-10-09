@@ -120,5 +120,67 @@
     <input type="reset" value="Сбросить">
   </form>
   </details>
+
+  <details open>
+    <summary>Сортировка</summary>
+    <form>
+      <p>
+        <label>
+          Первый уровень:
+          <select name="sort_1">
+            <option value="">Нет</option>
+            <option value="name">Название</option>
+            <option value="group">Группа</option>
+            <option value="diet">Тип питания</option>
+            <option value="habitat">Среда обитания</option>
+          </select>
+        </label>
+
+        <label>
+          По убыванию?
+          <input type="checkbox" name="descending_1" value="yes">
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Второй уровень:
+          <select name="sort_2">
+            <option value="">Нет</option>
+            <option value="name">Название</option>
+            <option value="group">Группа</option>
+            <option value="diet">Тип питания</option>
+            <option value="habitat">Среда обитания</option>
+          </select>
+        </label>
+
+        <label>
+          По убыванию?
+          <input type="checkbox" name="descending_2" value="yes">
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Третий уровень:
+          <select name="sort_3">
+            <option value="">Нет</option>
+            <option value="name">Название</option>
+            <option value="group">Группа</option>
+            <option value="diet">Тип питания</option>
+            <option value="habitat">Среда обитания</option>
+          </select>
+        </label>
+
+        <label>
+          По убыванию?
+          <input type="checkbox" name="descending_3" value="yes">
+        </label>
+      </p>
+
+      <input type="button" value="Сортировать">
+      <input type="reset" value="Сбросить">
+    </form>
+  </details>
 </body>
 </html>
