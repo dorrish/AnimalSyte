@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    background: #faf9f5;
+    color: #30352f;
+}
+
+.header {
+    background: #2f602c;
+    color: white;
+    padding: 12px 6%;
+}
+
+.menu {
+    width: 88%;
+    margin: 8px auto;
+    text-align: right;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 8px 14px;
+    color: #2f603c;
+    text-decoration: none;
+}
+
+.menu .active{
+    background: #2f603c;
+    color: white;
+}
