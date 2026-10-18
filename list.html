@@ -17,32 +17,29 @@
 
       <p>
         <label>
-          <input type="radio" name="axis_x" value="group" checked>
-          Группа животных
+          <input id="group" type="radio" name="axis_x" value="group" checked>Группа животных
         </label><br>
 
         <label>
-          <input type="radio" name="axis_x" value="diet">
-          Тип питания
+          <input id="diet" type="radio" name="axis_x" value="diet">Тип питания
         </label><br>
 
         <label>
-          <input type="radio" name="axis_x" value="habitat">
-          Среда обитания
+          <input id="habitat" type="radio" name="axis_x" value="habitat">Среда обитания
         </label>
       </p>
       <p><b>Значение по оси OY</b></p>
       <p>
         <label>
-          <input type="checkbox" name="count" value="yes" checked>Количество животных в таблице
+          <input id="count" type="checkbox" name="count" value="yes" checked>Количество животных в таблице
         </label>
       </p>
       <p>
-        <label><input type="checkbox" name="lifespan_maximum" value="yes">Максимальная продолжительность жизни</label><br>
-        <label><input type="checkbox" name="lifespan_minimum" value="yes">Минимальная продолжительность жизни</label><br>
-        <label><input type="checkbox" name="population_sum" value="yes">Суммарная условная численность</label>
+        <label><input id="maxlife" type="checkbox" name="lifespan_maximum" value="yes">Максимальная продолжительность жизни</label><br>
+        <label><input id="minlife" type="checkbox" name="lifespan_minimum" value="yes">Минимальная продолжительность жизни</label><br>
+        <label><input id="total" type="checkbox" name="population_sum" value="yes">Средняя продолжительность жизни</label>
       </p>
-      <input type="button" value="Построить">
+      <input id="graph" type="button" value="Построить">
     </form>
     <p>Здесь будет график</p>
   </details> 
@@ -51,8 +48,7 @@
   <form>
     <p>
       <label>
-        Название:
-        <input type="text" name="name">
+        Название:<input id="animal" type="text" name="name">
       </label>
     </p>
     <p>
@@ -80,71 +76,25 @@
     </p>
   <p>
     <label>
-      Среда обитания:
-      <select name="habitat">
-        <option value="">Все</option>
-        <option value="Антарктические моря и льды">Антарктические моря и льды</option>
-        <option value="Арктические моря">Арктические моря</option>
-        <option value="Берега водоёмов">Берега водоёмов</option>
-        <option value="Горные леса">Горные леса</option>
-        <option value="Горные реки">Горные реки</option>
-        <option value="Горы">Горы</option>
-        <option value="Засушливые равнины">Засушливые равнины</option>
-        <option value="Кустарниковые заросли">Кустарниковые заросли</option>
-        <option value="Леса">Леса</option>
-        <option value="Леса и кустарниковые заросли">Леса и кустарниковые заросли</option>
-        <option value="Леса и луга">Леса и луга</option>
-        <option value="Леса и открытые территории">Леса и открытые территории</option>
-        <option value="Леса и редколесья">Леса и редколесья</option>
-        <option value="Луга и кустарниковые заросли">Луга и кустарниковые заросли</option>
-        <option value="Морские побережья">Морские побережья</option>
-        <option value="Пресноводные болота">Пресноводные болота</option>
-        <option value="Пресные водоёмы">Пресные водоёмы</option>
-        <option value="Прибрежные леса">Прибрежные леса</option>
-        <option value="Прибрежные морские воды">Прибрежные морские воды</option>
-        <option value="Пустыни">Пустыни</option>
-        <option value="Пустыни и полупустыни">Пустыни и полупустыни</option>
-        <option value="Реки">Реки</option>
-        <option value="Саванны">Саванны</option>
-        <option value="Саванны и леса">Саванны и леса</option>
-        <option value="Саванны и полупустыни">Саванны и полупустыни</option>
-        <option value="Саванны и сухие леса">Саванны и сухие леса</option>
-        <option value="Степи и каменистые склоны">Степи и каменистые склоны</option>
-        <option value="Степи и полупустыни">Степи и полупустыни</option>
-        <option value="Сухие леса">Сухие леса</option>
-        <option value="Тропические леса">Тропические леса</option>
-        <option value="Тундра">Тундра</option>
-        <option value="Эвкалиптовые леса">Эвкалиптовые леса</option>
-      </select>
+      <p>
+        <label for="place">Среда обитания:</label>
+        <input id="place" type="text" name="habitat">
+      </p>
     </label>
   </p>
     <p>
       Продолжительность жизни:
-      <label>
-        от
-        <input type="number" name="lifespan_min" min="1">
-      </label>
-      <label>
-        до
-        <input type="number" name="lifespan_max" min="1">
-      </label>
-      лет
+      <label>от<input id="life1" type="number" name="lifespan_min" min="1" max="100"></label>
+      <label>до<input id="life2" type="number" name="lifespan_max" min="1" max="100"></label>лет
     </p>
 
     <p>
       Условная численность:
-      <label>
-        от
-        <input type="number" name="population_min" min="0">
-      </label>
-      <label>
-        до
-        <input type="number" name="population_max" min="0">
-      </label>
-      особей
+      <label>от<input id="number1" type="number" name="population_min" min="0" max="100000"></label>
+      <label>до<input id="number2" type="number" name="population_max" min="0" max="100000"></label>особей
     </p>
-    <input type="button" value="Найти">
-    <input type="reset" value="Сбросить">
+    <input id="find" type="button" value="Найти">
+    <input id="reset1" type="reset" value="Сбросить">
   </form>
   </details>
 
@@ -152,9 +102,8 @@
     <summary>Сортировка</summary>
     <form>
       <p>
-        <label>
-          Первый уровень:
-          <select name="sort_1">
+        <label>Первый уровень:
+          <select id= "sort_1" name="sort_1">
             <option value="">Нет</option>
             <option value="name">Название</option>
             <option value="group">Группа</option>
@@ -165,16 +114,12 @@
           </select>
         </label>
 
-        <label>
-          По убыванию?
-          <input type="checkbox" name="descending_1" value="yes">
-        </label>
+        <label>По убыванию?<input id="down1" type="checkbox" name="descending_1" value="yes"></label>
       </p>
 
       <p>
-        <label>
-          Второй уровень:
-          <select name="sort_2">
+        <label>Второй уровень:
+          <select id="sort_2" name="sort_2">
             <option value="">Нет</option>
             <option value="name">Название</option>
             <option value="group">Группа</option>
@@ -185,16 +130,12 @@
           </select>
         </label>
 
-        <label>
-          По убыванию?
-          <input type="checkbox" name="descending_2" value="yes">
-        </label>
+        <label>По убыванию?<input id="down2" type="checkbox" name="descending_2" value="yes"></label>
       </p>
 
       <p>
-        <label>
-          Третий уровень:
-          <select name="sort_3">
+        <label>Третий уровень:
+          <select id="sort_3" name="sort_3">
             <option value="">Нет</option>
             <option value="name">Название</option>
             <option value="group">Группа</option>
@@ -205,14 +146,11 @@
           </select>
         </label>
 
-        <label>
-          По убыванию?
-          <input type="checkbox" name="descending_3" value="yes">
-        </label>
+        <label>По убыванию?<input id="down3" type="checkbox" name="descending_3" value="yes"></label>
       </p>
 
-      <input type="button" value="Сортировать">
-      <input type="reset" value="Сбросить">
+      <input id="sort" type="button" value="Сортировать">
+      <input id="reset2" type="reset" value="Сбросить">
     </form>
   </details>
   <table border="1" cellspacing="0" cellpadding="5">
@@ -227,7 +165,6 @@
       <th>Условная численность, особей</th>
     </tr>
     </thead>
-    
     <tbody>
     <tr>
       <td>1</td>
