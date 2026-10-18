@@ -57,3 +57,41 @@ body {
     border-top: 4px solid #faf9f5;
     box-sizing: border-box;
 }
+
+.animal {
+    width: 88%;
+    margin: 16px auto;
+    overflow: hidden;
+}
+
+.animal {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.animal img {
+    width: 80%;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.animal h3 {
+    margin: 8px 0;
+    color: #2f603c;
+    font-size: 18px;
+}
+
+.animal p {
+    margin: 8px 0;
+}
+
+.animal a {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #2f603c;
+    color: white;
+    text-decoration: none;
+}
