@@ -109,3 +109,36 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.article {
+    width: 88%;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.article .text {
+    float: left;
+    width: 75%;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+.article .picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.article h2 {
+    margin: 0 0 15px;
+    color: #2f603c;
+    text-align: right;
+}
+
+.article .more {
+    text-align: right;
+}
+
+.article a {
+    color: #2f603c;
+}
