@@ -10,6 +10,11 @@ body {
     padding: 12px 6%;
 }
 
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
 .menu {
     width: 88%;
     margin: 8px auto;
@@ -37,15 +42,23 @@ body {
 .photo {
     float: left;
     width: 33.333%;
-    height: 240px;
+    height: 300px;
     padding: 2px;
     box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
+}
+
+.photo a {
+    display: block;
+    height: 100%;
 }
 
 .photo img {
     display: block;
-    width: 100%;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .small {
@@ -58,7 +71,7 @@ body {
     box-sizing: border-box;
 }
 
-.animal {
+.animals {
     width: 88%;
     margin: 16px auto;
     overflow: hidden;
@@ -73,7 +86,7 @@ body {
 }
 
 .animal img {
-    width: 80%;
+    width: 80px;
     height: 80px;
     border-radius: 50%;
 }
@@ -85,6 +98,7 @@ body {
 }
 
 .animal p {
+    height: 60px;
     margin: 8px 0;
 }
 
