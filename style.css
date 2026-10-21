@@ -147,3 +147,60 @@ body {
 .article a {
     color: #2f603c;
 }
+
+.world {
+    width: 88%;
+    margin: 30px auto;
+    padding: 15px;
+    border: 1px solid #2f603c;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.world h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #2f603c;
+}
+
+.world .column {
+    float: left;
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.world .column p {
+    margin: 0 0 15px;
+}
+
+.world a {
+    color: #2f603c;
+}
+
+.worldphoto {
+    float : right;
+    width: 50%;
+    text-align: center;
+}
+
+.worldphoto img {
+    display: block;
+    height: 350px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.reverse .picture {
+    float: left;
+}
+
+.reverse .text {
+    float: right;
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+.reverse h2 {
+    text-align: left;
+}
