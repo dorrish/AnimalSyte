@@ -101,6 +101,9 @@ body {
 
 #panda {
     grid-area: panda;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 #okapi {
@@ -145,6 +148,21 @@ body {
 
 .content a {
     color: #2f603c;
+}
+
+#panda .text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#panda h2 {
+    text-align: center;
+}
+
+#panda .more {
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 footer {
