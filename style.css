@@ -62,41 +62,27 @@ body {
 }
 
 .gallery {
-    width: 88%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    width: 85%;
     margin: 12px auto;
-    overflow: hidden;
 }
 
 .photo {
-    float: left;
-    width: 33.333%;
-    height: 300px;
-    padding: 2px;
-    box-sizing: border-box;
+    display: block;
     overflow: hidden;
-    text-align: center;
 }
 
-.photo a {
-    display: block;
-    height: 100%;
+.gallery .wide {
+    grid-column: span 2;
 }
 
 .photo img {
     display: block;
+    width: 100%;
     height: 100%;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.small {
-    height: 50%;
-    overflow: hidden;
-}
-
-.bottom {
-    border-top: 4px solid #faf9f5;
-    box-sizing: border-box;
+    object-fit: cover;
 }
 
 .animals {
