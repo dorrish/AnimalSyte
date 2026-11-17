@@ -64,9 +64,10 @@ body {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 180px;
+    grid-template-rows: repeat(2, 180px);
     width: 85%;
     margin: 12px auto;
+    gap: 6px;
 }
 
 .photo {
@@ -85,137 +86,65 @@ body {
     object-fit: cover;
 }
 
-.animals {
-    width: 88%;
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 16px;
+    width: 76%;
     margin: 16px auto;
-    overflow: hidden;
+    grid-template-areas:
+        "panda okapi mangar"
+        "panda okapi fenek"
+        "panda pangolin world"
+        "panda pangolin food";
 }
 
-.animal {
-    float: left;
-    width: 20%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    text-align: center;
+#panda {
+    grid-area: panda;
 }
 
-.animal img {
-    width: 30%;
-    height: auto;
-    border-radius: 50%;
+#okapi {
+    grid-area: okapi;
 }
 
-.animal h3 {
-    margin: 8px 0;
-    color: #2f603c;
-    font-size: 18px;
+#pangolin {
+    grid-area: pangolin;
 }
 
-.animal p {
-    height: 60px;
-    margin: 8px 0;
+#mangar {
+    grid-area: mangar;
 }
 
-.animal a {
-    display: inline-block;
-    padding: 5px 12px;
-    background: #2f603c;
-    color: white;
-    text-decoration: none;
-}
-
-.article {
-    width: 88%;
-    margin: 30px auto;
-    overflow: hidden;
-}
-
-.article .text {
-    float: left;
-    width: 75%;
-    padding-right: 2%;
-}
-
-.article .picture {
-    float: right;
-    width: 20%;
-}
-
-.article .picture img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.article h2 {
-    margin: 0 0 15px;
-    color: #2f603c;
-    text-align: right;
-}
-
-.article .more {
-    text-align: right;
-}
-
-.article a {
-    color: #2f603c;
+#fenek {
+    grid-area: fenek;
 }
 
 .world {
-    width: 88%;
-    margin: 30px auto;
-    padding: 15px;
-    border: 1px solid #2f603c;
-    box-sizing: border-box;
-    overflow: hidden;
+    grid-area: world;
 }
 
-.world h2 {
-    margin: 0 0 20px;
-    text-align: center;
-    color: #2f603c;
-}
-
-.world .column {
-    float: left;
-    width: 25%;
-    padding-right: 2%;
+.content > div {
+    padding: 16px;
+    background: #e8eee3;
+    border-radius: 24px;
     box-sizing: border-box;
 }
 
-.world .column p {
-    margin: 0 0 15px;
-}
-
-.world a {
-    color: #2f603c;
-}
-
-.worldphoto {
-    float : right;
-    width: 50%;
-    text-align: center;
-}
-
-.worldphoto img {
+.content img {
     display: block;
-    height: auto;
-    width: 70%;
-    margin: 0 auto;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.reverse .picture {
-    float: left;
+.content h2 {
+    margin: 0 0 16px;
+    color: #2f603c;
 }
 
-.reverse .text {
-    float: right;
-    padding-right: 0;
-    padding-left: 2%;
-}
-
-.reverse h2 {
-    text-align: left;
+.content a {
+    color: #2f603c;
 }
 
 footer {
