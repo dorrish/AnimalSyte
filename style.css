@@ -3,34 +3,62 @@ body {
     background: #faf9f5;
     color: #30352f;
 }
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    width: 94%;
+    margin: 12px auto 0px;
+
+    a {
+        padding: 12px 18px;
+        color: #2f603c;
+        text-decoration: none;
+    }
+
+    .active {
+        background: #2f602c;
+        color: white;
+        border-radius: 6px 6px 0 0;
+    }
+}
 
 .header {
-    background: #2f602c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 94%;
+    margin: 0px auto;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    background-color: #2f602c;
     color: white;
-    padding: 12px 6%;
 }
 
 .header h1 {
-    margin: 0;
-    font-size: 28px;
+    margin: 0px;
+    font-size: 24px;
 }
 
-.menu {
-    width: 88%;
-    margin: 8px auto;
-    text-align: right;
+.search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
-.menu a {
-    display: inline-block;
-    padding: 8px 14px;
+.search input {
+    width: 220px;
+    padding:6px 8px;
+    box-sizing: border-box;
+}
+
+.search button {
+    padding: 6px 12px;
+    background-color: #faf9f5;
     color: #2f603c;
-    text-decoration: none;
-}
-
-.menu .active{
-    background: #2f603c;
-    color: white;
+    border: 1px solid #faf9f5;
+    border-radius: 4px;
 }
 
 .gallery {
