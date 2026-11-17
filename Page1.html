@@ -6,15 +6,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Необычные животные</h1>
-    </div>
 
     <div class="menu">
         <a class="active" href="Page1.html">Главная</a>
         <a href="#animals">Животные</a>
         <a href="Page2.html">Красная панда</a>
         <a href="list.html">Таблица</a>
+    </div>
+
+
+    <div class="header">
+        <h1>Необычные животные</h1>
+
+        <form class="search">
+            <input id="search" type="search"
+                   name="search" placeholder="Поиск по сайту"
+                   aria-label="Поиск по сайту">
+            <button type="button">Найти</button>
+        </form>
     </div>
     <div class="gallery">
         <div class="photo">
@@ -36,7 +45,7 @@
                 </a>
             </div>
 
-            <div class="small">
+            <div class="small bottom">
                 <a href="#fenek">
                     <img src="images/Fenek.jpg" alt="Фенек">
                 </a>
