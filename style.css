@@ -63,7 +63,7 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(2, 180px);
     width: 85%;
     margin: 12px auto;
@@ -86,90 +86,162 @@ body {
     object-fit: cover;
 }
 
+/* Основная сетка: две узкие колонки и одна широкая. */
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap: 16px;
-    width: 76%;
-    margin: 16px auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
     grid-template-areas:
         "panda okapi mangar"
         "panda okapi fenek"
         "panda pangolin world"
         "panda pangolin food";
+    gap: 16px;
+    width: 76%;
+    margin: 16px auto 32px;
 }
-
 #panda {
     grid-area: panda;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
-
 #okapi {
     grid-area: okapi;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
-
 #pangolin {
     grid-area: pangolin;
 }
-
 #mangar {
     grid-area: mangar;
 }
-
 #fenek {
     grid-area: fenek;
 }
-
-.world {
+#world {
     grid-area: world;
 }
+#food {
+    grid-area: food;
+}
 
-.content > div {
+.card {
     padding: 16px;
     background: #e8eee3;
     border-radius: 24px;
     box-sizing: border-box;
+    min-width: 0;
 }
-
-.content img {
+.card h2 {
+    margin: 0;
+    color: #2f603c;
+    font-size: 20px;
+}
+.card p {
+    margin: 0 0 12px;
+    line-height: 1.45;
+}
+.card a {
+    color: #2f603c;
+}
+.card img {
     display: block;
     width: 100%;
-    height: 160px;
+    height: 150px;
     object-fit: cover;
     border-radius: 20px;
 }
-
-.content h2 {
-    margin: 0 0 16px;
-    color: #2f603c;
-}
-
-.content a {
-    color: #2f603c;
-}
-
-#panda .text {
+.vertical, .top {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    gap: 16px;
 }
-
-#panda h2 {
+.vertical h2, .top h2 {
     text-align: center;
 }
-
-#panda .more {
-    margin-top: auto;
-    margin-bottom: 0;
+.card .more {
+    margin: auto 0 0;
+}
+.top .more {
+    text-align: right;
+}
+#panda {
+    background: #dbe6d4;
+}
+#pangolin, #world, #food {
+    background: #eee8d9;
 }
 
+.row, .reverse {
+    display: grid;
+    gap: 14px;
+    align-items: start;
+}
+.row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1.5fr);
+}
+.reverse {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 3fr);
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.row .more {
+    text-align: right;
+}
+.description .more a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #2f603c;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
 footer {
     background: #2f602c;
     color: white;
     padding: 20px 6%;
+}
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+    .menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch;
+    }
+    .menu a {
+        text-align: center;
+    }
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search input {
+        width: 100%;
+    }
+    .gallery {
+        width: 94%;
+        grid-template-columns: minmax(0, 1fr); grid-template-rows: repeat(4, 180px);
+    }
+    .gallery .wide {
+        grid-column: auto;
+    }
+    .content {
+        width: 94%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "panda" "okapi" "pangolin" "mangar" "fenek" "world" "food";
+    }
+    .row, .reverse {
+        grid-template-columns: minmax(0, 1fr); }
+    .description {
+        height: auto;
+    }
+    .card img {
+        height: 220px;
+    }
 }
