@@ -108,6 +108,9 @@ body {
 
 #okapi {
     grid-area: okapi;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 #pangolin {
